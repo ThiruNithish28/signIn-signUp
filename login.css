@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Noto+Sans&family=Tilt+Neon&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    color-scheme: dark light;
+    --bg-color:#121212;
+    --primary-clr:#5584B0;
+    --sec-clr:#C9B4D3;
+    --white-clr:white;
+    --blur:var(--hover-clr);
+    --form-bg-clr:white;
+    --font-clr:black;
+    --font-ff:'Tilt Neon', sans-serif;
+    --body-clr:grey;
+
+}
+/*------------------------------------ custom properties--------------------------- */
+.d-flex{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.d-flex-col{
+    display:flex;
+    flex-direction: column;
+    
+}
+.gap-05{
+    gap:.5em
+}
+
+/* glass blur effect  */
+.glass-blur{
+    /* From https://css.glass */
+ background: rgba(230, 242, 245, 0.6);
+ border-radius: 16px;
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(3.4px);
+ -webkit-backdrop-filter: blur(5.4px);
+ border: 1px solid rgba(255, 255, 255, 0.86);
+ border-radius: 10px;
+}
+
+/* html list ,a ,header style */
+li{
+    list-style: none;
+   
+}
+a{
+    color: var(--primary-clr);
+    text-decoration: none;
+    transition: color .4s ease-in
+}
+
+h1{
+    color:var(--primary-clr);
+    width: 100%;
+    text-align: center;
+}
+body{
+    font: 1.6rem var(--font-ff) ;
+    color: var(--body-clr);
+    text-transform: capitalize;
+    background: url(./image/bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+/* -------------- */
+
+main{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  
+}
+
+.form_container{
+    display: flex;
+    flex-direction: column;
+    width:400px;
+    padding: 1em;
+    gap: 25px;
+     
+
+}
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label{
+  color:var(--primary-clr);
+}
+input{
+    position: relative;
+    font-size: 1.9rem;
+    font-family:var(--font-ff);
+    color: var(--font-clr);
+    background: transparent;
+    border: 0 solid black;
+    border-bottom: 1.5px solid rgb(0, 0, 0,.5) ;
+    outline: none;
+}
+input::placeholder{
+    color: rgb(0, 0, 0,.5);
+}
+.form-group span{
+    position: absolute;
+    left: 1;
+    /* padding: 3px; */
+    font-size: 1.4rem;
+    color: grey;
+    transform: translateX(10px) translateY(5px);
+    pointer-events: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+input:valid ~ span,
+input:focus ~ span{
+    transform: translatex(10px) translateY(-13.5px);
+    font-size: 1.2rem;
+}
+/* btn style */
+.btn{
+    font: 1.9rem var(--font-ff);
+    text-transform: capitalize;
+    text-align: center;
+    outline: none;
+    border:2px solid var(--blur);
+    background-color: var(--primary-clr);
+    box-shadow: inset 0 0 0  transprant;
+}
+.btn,
+input{
+    padding: .5em .8em;
+    border-radius: 6px;
+}
+.google_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    color:black;
+    background-color: var(--white-clr);
+}
+.sign-up p{
+    color: black;
+}
